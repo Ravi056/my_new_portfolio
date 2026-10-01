@@ -1267,47 +1267,33 @@ img {
    13. FOOTER
 ========================= */
 
-.footer {
-    padding: 30px 0;
+/* =========================
+   13. FOOTER
+========================= */
 
+.footer {
+    width: 100%;
+    padding: 30px 0;
     border-top: 1px solid var(--border);
 }
 
 .footer-container {
     display: flex;
-
+    justify-content: center;
     align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
+    text-align: center;
 }
 
-.footer-logo {
-    color: var(--accent);
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
+.footer-info {
+    width: 100%;
+    text-align: center;
 }
 
-.footer p {
+.footer-info p {
+    margin: 4px 0;
     color: var(--text-muted);
-
     font-size: 0.8rem;
-}
-
-.footer-social {
-    display: flex;
-
-    gap: 8px;
-}
-
-.footer-social a {
-    width: 36px;
-    height: 36px;
-
-    font-size: 0.8rem;
+    text-align: center;
 }
 
 
@@ -1317,7 +1303,6 @@ img {
 
 ::selection {
     color: var(--bg-primary);
-
     background: var(--accent);
 }
 
@@ -1336,7 +1321,6 @@ img {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-
     background: #23364d;
 }
 
@@ -1386,11 +1370,10 @@ img {
     }
 
 
-    /* navigation */
+    /* Navigation */
 
     .menu-toggle {
         display: block;
-
         order: 3;
     }
 
@@ -1409,7 +1392,6 @@ img {
         display: none;
 
         flex-direction: column;
-
         align-items: flex-start;
 
         gap: 0;
@@ -1436,17 +1418,15 @@ img {
     }
 
 
-    /* hero */
+    /* Hero */
 
     .hero {
         min-height: auto;
-
         padding-top: 150px;
     }
 
     .hero-container {
         grid-template-columns: 1fr;
-
         gap: 70px;
     }
 
@@ -1459,16 +1439,15 @@ img {
     }
 
 
-    /* about */
+    /* About */
 
     .about-grid {
         grid-template-columns: 1fr;
-
         gap: 45px;
     }
 
 
-    /* education */
+    /* Education */
 
     .education-grid {
         grid-template-columns: 1fr;
@@ -1501,7 +1480,6 @@ img {
 
     .nav-cv-btn {
         padding: 8px 12px;
-
         font-size: 0.7rem;
     }
 
@@ -1510,17 +1488,15 @@ img {
     }
 
 
-    /* hero */
+    /* Hero */
 
     .hero {
         padding-top: 125px;
-
         padding-bottom: 70px;
     }
 
     .hero h1 {
         font-size: clamp(3.2rem, 17vw, 5rem);
-
         letter-spacing: -3px;
     }
 
@@ -1534,7 +1510,6 @@ img {
 
     .hero-buttons {
         flex-direction: column;
-
         align-items: stretch;
     }
 
@@ -1543,11 +1518,10 @@ img {
     }
 
 
-    /* hero card */
+    /* Hero Card */
 
     .hero-card {
         min-height: 400px;
-
         padding: 28px;
     }
 
@@ -1556,11 +1530,10 @@ img {
     }
 
 
-    /* headings */
+    /* Headings */
 
     .section-heading {
         gap: 12px;
-
         margin-bottom: 40px;
     }
 
@@ -1569,7 +1542,7 @@ img {
     }
 
 
-    /* experience */
+    /* Experience */
 
     .timeline {
         margin-left: 7px;
@@ -1584,18 +1557,32 @@ img {
     }
 
 
-    /* skills */
+    /* Skills */
 
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* footer */
+    /* Footer */
+
+    .footer {
+        padding: 25px 0;
+    }
 
     .footer-container {
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
+    .footer-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-info p {
+        margin: 4px 0;
         text-align: center;
     }
 
@@ -1614,6 +1601,61 @@ img {
 
     .hero h1 {
         font-size: 3rem;
+    }
+
+}
+
+/* =========================================================
+   CV PAGE - FINAL SECTION SPACING FIX
+========================================================= */
+
+/* Space after Profile card */
+.cv-page .cv-profile {
+    margin-bottom: 0;
+}
+
+/* Every section heading after content */
+.cv-page .cv-profile + .section-heading {
+    margin-top: 80px;
+}
+
+
+/* Space after Education cards */
+.cv-page .education-grid + .section-heading {
+    margin-top: 80px;
+}
+
+
+/* Space after Experience */
+.cv-page .timeline + .section-heading {
+    margin-top: 80px;
+}
+
+
+/* Space after Skills */
+.cv-page .skills-grid + .section-heading {
+    margin-top: 80px;
+}
+
+
+/* Space between heading and its content */
+.cv-page .section-heading {
+    margin-bottom: 40px;
+}
+
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+
+    .cv-page .cv-profile + .section-heading,
+    .cv-page .education-grid + .section-heading,
+    .cv-page .timeline + .section-heading,
+    .cv-page .skills-grid + .section-heading {
+        margin-top: 55px;
+    }
+
+    .cv-page .section-heading {
+        margin-bottom: 30px;
     }
 
 }
